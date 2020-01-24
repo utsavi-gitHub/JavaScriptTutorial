@@ -22,20 +22,21 @@ function generateCat(){
 }              
 
 //Challange 3- Rock, Paper, Scissors
-function rpsGame(yourChoice){
+function rpsGame(yourChoice){   
 console.log(yourChoice);
-//var humanChoice, botChoice;
+var humanChoice, botChoice;
 //humanChoice = yourChoice.id;
-botChoice = 
+botChoice = numberToChoice (randToRpsInt());
+console.log(botChoice);
 //results = decideWinner (humanChoice, botChoice);  //[0, 1] human lost | bot won
 //message = finalMessage (results); //{'message': "You won!", 'color': 'green'}
-rpsFrontEnd(yourChoice)
+//rpsFrontEnd(yourChoice.id, botChoice, message);
 }
 
-function randRpsInt() {
-return Math.floor (Math.random() * 3); 
+function randToRpsInt() {
+return Math.floor(Math.random() * 3);
 }
 
-function botChoiceInt() {
-
+function numberToChoice(number) {
+return ['Rock', 'Paper', 'Scissors'][number];
 }
